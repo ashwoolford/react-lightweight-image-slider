@@ -20,7 +20,7 @@ A Simple and lightweight image slider in react.
 
 ```typescript
 import React from 'react';
-import ImageSlider from './ImageSlider';
+import ImageSlider from "react-lightweight-image-slider";
 
 function App() {
 
