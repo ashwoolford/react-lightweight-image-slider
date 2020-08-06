@@ -1,0 +1,31 @@
+{
+  "name": "react-lightweight-image-slider",
+  "version": "1.0.1",
+  "description": "A Simple and lightweight image slider in react",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "author": "ashwoolford",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashwoolford/react-lightweight-image-slider.git"
+  },
+  "keywords": [
+    "react slider",
+    "react simple image slider",
+    "react image slider",
+    "react lightweight slider",
+    "react lightweight image slider"
+  ],
+  "peerDependencies": {
+    "react": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.44",
+    "react": "^16.13.1",
+    "typescript": "^3.9.7"
+  }
+}

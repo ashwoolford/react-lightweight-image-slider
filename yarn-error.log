@@ -1,0 +1,51 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add react @types/reac -D
+
+PATH: 
+  /usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/ashrafhossain/development/flutter/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/ashrafhossain/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Users/ashrafhossain/Library/Android/sdk/platform-tools/:/Users/ashrafhossain/Library/Android/sdk/emulator:/Users/ashrafhossain/Library/Android/sdk/tools:/Users/ashrafhossain/Library/Android/sdk/tools/bin:/Users/ashrafhossain/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  10.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@types%2freac: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:66987:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:140748:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141720:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141642:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "simple-typescript-func",
+    "version": "1.0.0",
+    "description": "",
+    "main": "lib/index.js",
+    "types": "lib",
+    "scripts": {
+      "build": "tsc -p ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "typescript": "^3.9.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
