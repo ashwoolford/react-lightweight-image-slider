@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './image-slider.css'; git
 interface IProps {
     visibleItems?: any;
     isInfinite?: any;

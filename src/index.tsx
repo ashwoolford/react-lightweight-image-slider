@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './image-slider.css';
 
 interface IProps {
     visibleItems?: any,
