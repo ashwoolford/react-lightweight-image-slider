@@ -1,11 +1,10 @@
 import * as React from 'react';
-import './image-slider.css';
 
 interface IProps {
-    visibleItems: number;
-    isInfinite: any;
-    images: string[];
-    delay: number;
+    visibleItems?: any,
+    isInfinite?: any,
+    images: string[],
+    delay?: number,
 }
 
 interface IState {
@@ -19,7 +18,7 @@ interface IState {
 
 class ImageSlider extends React.Component<IProps, IState> {
 
-    public static defaultProps = {
+    static defaultProps = {
         visibleItems: 3,
         isInfinite: true,
         delay: 5000,
@@ -50,7 +49,7 @@ class ImageSlider extends React.Component<IProps, IState> {
         this.setState({ currentPosition });
     }
 
-    setVisibleItems = (currentVisibleItems: any) => {
+    setVisibleItems = (currentVisibleItems: number) => {
         const container = document.querySelector('.rsc-slider') as HTMLElement;
         const visibleItems = (container && container.offsetWidth < 720) ? 1 : currentVisibleItems;
         this.setState({ visibleItems });
@@ -63,7 +62,7 @@ class ImageSlider extends React.Component<IProps, IState> {
         return { transform: `translateX(-${shift}px)` };
     }
 
-    isOpaque = (key: any) => {
+    isOpaque = (key: number) => {
         const nextPosition = this.props.visibleItems + this.state.currentPosition;
         const opaque = this.props.images.slice(this.state.currentPosition, nextPosition);
         return opaque.indexOf(this.props.images[key]) !== -1;
@@ -87,7 +86,7 @@ class ImageSlider extends React.Component<IProps, IState> {
         }
     }
 
-    updatePosition = (nextPosition: any) => {
+    updatePosition = (nextPosition: number) => {
         const { visibleItems, currentPosition } = this.state;
         console.log(visibleItems, currentPosition, nextPosition);
         const skipScrollIfEnd = this.skipScrollIfEnd(visibleItems, currentPosition, nextPosition);
@@ -109,28 +108,28 @@ class ImageSlider extends React.Component<IProps, IState> {
         return nextPosition;
     }
 
-    skipScrollIfNonInfinite = (visibleItems: any, currentPosition: any, nextPosition: any) => {
+    skipScrollIfNonInfinite = (visibleItems: number, currentPosition: number, nextPosition: number) => {
 
         if (!this.state.isInfinite && nextPosition < 0) {
             return currentPosition;
         }
     }
 
-    scrollIfInfinite = (visibleItems: any, currentPosition: any, nextPosition: any) => {
+    scrollIfInfinite = (visibleItems: number, currentPosition: number, nextPosition: number) => {
 
         if (this.state.isInfinite && nextPosition < 0) {
             return nextPosition + visibleItems;
         }
     }
 
-    scrollToBeginningIfEnd = (visibleItems: any, currentPosition: any, nextPosition: any) => {
+    scrollToBeginningIfEnd = (visibleItems: number, currentPosition: number, nextPosition: number) => {
 
         if (nextPosition + visibleItems > this.state.totalItems) {
             return 0;
         }
     }
 
-    skipScrollIfEnd = (visibleItems: any, currentPosition: any, nextPosition: any) => {
+    skipScrollIfEnd = (visibleItems: number, currentPosition: number, nextPosition: number) => {
 
         if (!this.state.isInfinite && nextPosition + visibleItems > this.state.totalItems) {
             return currentPosition;
